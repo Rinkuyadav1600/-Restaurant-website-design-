@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" async></script>
+</head>
+</head>
+<body>
+ 
+  
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Restaurant Logo">
+      <span>Paucek & Large</span>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+
+    </div>
+
+    <div class="user-profile">
+      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="User Profile" class="profile-img" id="profileImg">
+    </div>
+
+   
+    <div class="profile-dropdown" id="profileDropdown">
+      <div class="user-info">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="User" width="40" height="40" style="border-radius:50%;margin-bottom:10px;">
+        <h4 style="color:#fbbf24;margin-bottom:5px;">Jane Doe</h4>
+        <p style="color:#aaa;font-size:12px;">jane.doe@example.com</p>
+      </div>
+
+      <div class="divider"></div>
+      <a href="#"><i class="fas fa-user"></i> My Profile</a>
+      <a href="#"><i class="fas fa-clipboard-list"></i> My Orders</a>
+      <a href="#"><i class="fas fa-heart"></i> Favorites</a>
+      <div class="divider"></div>
+      <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+    </div>
+
+  </nav>
+
+
+  <div class="main-content">
+    <div class="container">
+      <h1>FOOD MENU</h1>
+      <h3>Paucek and Large Restaurant</h3>
+
+    
+      <div class="category-filter">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="main">Main Course</button>
+        <button class="filter-btn" data-category="appetizer">Appetizers</button>
+        <button class="filter-btn" data-category="beverage">Beverages</button>
+      </div>
+
+
+      <div class="section" data-category="main">
+        <div class="menu-items">
+          <div class="menu-title">MAIN COURSE</div>
+          <p>Cheeseburger <span>$34</span></p>
+          <p>Cheese Sandwich <span>$22</span></p>
+          <p>Chicken burger <span>$23</span></p>
+          <p>Spicy chicken <span>$24</span></p>
+          <p>Hot dog <span>$24</span></p>
+        </div>
+
+        <div class="menu-image">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Main Course">
+        </div>
+      </div>
+
+
+      <div class="section" data-category="appetizer">
+        <div class="menu-items">
+          <div class="menu-title">APPETIZERS</div>
+          <p>Fruit Salad <span>$13</span></p>
+          <p>Cocktails <span>$12</span></p>
+          <p>Nuggets <span>$14</span></p>
+          <p>Sandwich <span>$13</span></p>
+          <p>French Fries <span>$15</span></p>
+        </div>
+
+        <div class="menu-image">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Appetizers">
+        </div>
+      </div>
+
+
+      <div class="section" data-category="beverage">
+        <div class="menu-items">
+          <div class="menu-title">BEVERAGES</div>
+          <p>Milk Shake <span>$3</span></p>
+          <p>Iced Tea <span>$2</span></p>
+          <p>Orange Juice <span>$4</span></p>
+          <p>Lemon Tea <span>$3</span></p>
+          <p>Coffee <span>$5</span></p>
+        </div>
+        <div class="menu-image">
+          <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Beverages">
+        </div>
+      </div>
+
+      <div class="footer">
+        <div>123-456-7890</div>
+        <div>123 Anywhere St., Any City</div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeLogin">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+      <div class="switch-form">
+        Don't have an account? <a id="showSignup">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeSignup">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" required>
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" required>
+        </div>
+        <div class="form-group">
+          <label for="signupConfirm">Confirm Password</label>
+          <input type="password" id="signupConfirm" required>
+        </div>
+        <button type="submit" class="submit-btn">Create Account</button>
+      </form>
+      <div class="switch-form">
+        Already have an account? <a id="showLogin">Login</a>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
